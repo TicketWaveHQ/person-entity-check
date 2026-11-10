@@ -1,0 +1,838 @@
+{
+  "schemaVersion": 1,
+  "tool": {
+    "name": "person-entity-check",
+    "version": "0.1.0"
+  },
+  "generatedAt": "2026-11-10T21:32:24.777Z",
+  "mode": "no-network",
+  "requests": 9,
+  "set": [
+    {
+      "index": 1,
+      "kind": "page",
+      "url": "https://ticketwavehq.com/jordan"
+    },
+    {
+      "index": 2,
+      "kind": "page",
+      "url": "https://veryseoly.com/jordan"
+    },
+    {
+      "index": 3,
+      "kind": "page",
+      "url": "https://dacros.com/jordan"
+    },
+    {
+      "index": 4,
+      "kind": "page",
+      "url": "https://www.jortech.co.uk/jordan"
+    },
+    {
+      "index": 5,
+      "kind": "page",
+      "url": "https://custodiance.com/jordan"
+    },
+    {
+      "index": 6,
+      "kind": "page",
+      "url": "https://citorah.com/author"
+    },
+    {
+      "index": 7,
+      "kind": "profile",
+      "url": "https://github.com/eu-jordangilbert"
+    },
+    {
+      "index": 8,
+      "kind": "profile",
+      "url": "https://www.linkedin.com/in/eu-jordangilbert/"
+    },
+    {
+      "index": 9,
+      "kind": "profile",
+      "url": "https://www.instagram.com/jorzior/"
+    }
+  ],
+  "pages": [
+    {
+      "index": 1,
+      "url": "https://ticketwavehq.com/jordan",
+      "status": 200,
+      "finalUrl": "https://ticketwavehq.com/jordan",
+      "chain": [
+        {
+          "url": "https://ticketwavehq.com/jordan",
+          "status": 200
+        }
+      ],
+      "error": null,
+      "canonical": "https://ticketwavehq.com/jordan",
+      "jsonldBlocks": 4,
+      "personCount": 1,
+      "person": {
+        "via": "ProfilePage.mainEntity",
+        "id": "https://ticketwavehq.com/#jordan",
+        "name": "Jordan Lewis Gilbert",
+        "names": [
+          "Jordan Lewis Gilbert"
+        ],
+        "alternateNames": [
+          "Jordan Gilbert"
+        ],
+        "url": "https://ticketwavehq.com/jordan",
+        "sameAs": [
+          "https://veryseoly.com/jordan",
+          "https://www.jortech.co.uk/jordan",
+          "https://dacros.com/jordan",
+          "https://citorah.com/author",
+          "https://custodiance.com/jordan",
+          "https://github.com/eu-jordangilbert",
+          "https://www.linkedin.com/in/eu-jordangilbert/",
+          "https://www.instagram.com/jorzior/"
+        ],
+        "hasSameAs": true
+      },
+      "coverage": [
+        {
+          "index": 1,
+          "state": "self"
+        },
+        {
+          "index": 2,
+          "state": "listed"
+        },
+        {
+          "index": 3,
+          "state": "listed"
+        },
+        {
+          "index": 4,
+          "state": "listed"
+        },
+        {
+          "index": 5,
+          "state": "listed"
+        },
+        {
+          "index": 6,
+          "state": "listed"
+        },
+        {
+          "index": 7,
+          "state": "listed"
+        },
+        {
+          "index": 8,
+          "state": "listed"
+        },
+        {
+          "index": 9,
+          "state": "listed"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "url": "https://veryseoly.com/jordan",
+      "status": 200,
+      "finalUrl": "https://veryseoly.com/jordan",
+      "chain": [
+        {
+          "url": "https://veryseoly.com/jordan",
+          "status": 200
+        }
+      ],
+      "error": null,
+      "canonical": "https://veryseoly.com/jordan",
+      "jsonldBlocks": 4,
+      "personCount": 1,
+      "person": {
+        "via": "ProfilePage.mainEntity",
+        "id": "https://veryseoly.com/jordan#person",
+        "name": "Jordan Lewis Gilbert",
+        "names": [
+          "Jordan Lewis Gilbert"
+        ],
+        "alternateNames": [
+          "Jordan Gilbert"
+        ],
+        "url": "https://veryseoly.com/jordan",
+        "sameAs": [
+          "https://www.jortech.co.uk/jordan",
+          "https://dacros.com/jordan",
+          "https://ticketwavehq.com/jordan",
+          "https://citorah.com/author",
+          "https://custodiance.com/jordan",
+          "https://github.com/eu-jordangilbert",
+          "https://www.linkedin.com/in/eu-jordangilbert/",
+          "https://www.instagram.com/jorzior/"
+        ],
+        "hasSameAs": true
+      },
+      "coverage": [
+        {
+          "index": 1,
+          "state": "listed"
+        },
+        {
+          "index": 2,
+          "state": "self"
+        },
+        {
+          "index": 3,
+          "state": "listed"
+        },
+        {
+          "index": 4,
+          "state": "listed"
+        },
+        {
+          "index": 5,
+          "state": "listed"
+        },
+        {
+          "index": 6,
+          "state": "listed"
+        },
+        {
+          "index": 7,
+          "state": "listed"
+        },
+        {
+          "index": 8,
+          "state": "listed"
+        },
+        {
+          "index": 9,
+          "state": "listed"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "url": "https://dacros.com/jordan",
+      "status": 200,
+      "finalUrl": "https://dacros.com/jordan",
+      "chain": [
+        {
+          "url": "https://dacros.com/jordan",
+          "status": 200
+        }
+      ],
+      "error": null,
+      "canonical": "https://dacros.com/jordan",
+      "jsonldBlocks": 1,
+      "personCount": 1,
+      "person": {
+        "via": "ProfilePage.mainEntity",
+        "id": "https://dacros.com/jordan#jordan-gilbert",
+        "name": "Jordan Lewis Gilbert",
+        "names": [
+          "Jordan Lewis Gilbert"
+        ],
+        "alternateNames": [
+          "Jordan Gilbert"
+        ],
+        "url": "https://dacros.com/jordan",
+        "sameAs": [
+          "https://veryseoly.com/jordan",
+          "https://www.jortech.co.uk/jordan",
+          "https://ticketwavehq.com/jordan",
+          "https://citorah.com/author",
+          "https://custodiance.com/jordan",
+          "https://github.com/eu-jordangilbert",
+          "https://www.linkedin.com/in/eu-jordangilbert/",
+          "https://www.instagram.com/jorzior/"
+        ],
+        "hasSameAs": true
+      },
+      "coverage": [
+        {
+          "index": 1,
+          "state": "listed"
+        },
+        {
+          "index": 2,
+          "state": "listed"
+        },
+        {
+          "index": 3,
+          "state": "self"
+        },
+        {
+          "index": 4,
+          "state": "listed"
+        },
+        {
+          "index": 5,
+          "state": "listed"
+        },
+        {
+          "index": 6,
+          "state": "listed"
+        },
+        {
+          "index": 7,
+          "state": "listed"
+        },
+        {
+          "index": 8,
+          "state": "listed"
+        },
+        {
+          "index": 9,
+          "state": "listed"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "url": "https://www.jortech.co.uk/jordan",
+      "status": 200,
+      "finalUrl": "https://www.jortech.co.uk/jordan",
+      "chain": [
+        {
+          "url": "https://www.jortech.co.uk/jordan",
+          "status": 200
+        }
+      ],
+      "error": null,
+      "canonical": "https://www.jortech.co.uk/jordan",
+      "jsonldBlocks": 4,
+      "personCount": 1,
+      "person": {
+        "via": "ProfilePage.mainEntity",
+        "id": "https://www.jortech.co.uk/jordan#person",
+        "name": "Jordan Lewis Gilbert",
+        "names": [
+          "Jordan Lewis Gilbert"
+        ],
+        "alternateNames": [
+          "Jordan Gilbert"
+        ],
+        "url": "https://www.jortech.co.uk/jordan",
+        "sameAs": [
+          "https://veryseoly.com/jordan",
+          "https://dacros.com/jordan",
+          "https://ticketwavehq.com/jordan",
+          "https://citorah.com/author",
+          "https://custodiance.com/jordan",
+          "https://github.com/eu-jordangilbert",
+          "https://www.linkedin.com/in/eu-jordangilbert/",
+          "https://www.instagram.com/jorzior/"
+        ],
+        "hasSameAs": true
+      },
+      "coverage": [
+        {
+          "index": 1,
+          "state": "listed"
+        },
+        {
+          "index": 2,
+          "state": "listed"
+        },
+        {
+          "index": 3,
+          "state": "listed"
+        },
+        {
+          "index": 4,
+          "state": "self"
+        },
+        {
+          "index": 5,
+          "state": "listed"
+        },
+        {
+          "index": 6,
+          "state": "listed"
+        },
+        {
+          "index": 7,
+          "state": "listed"
+        },
+        {
+          "index": 8,
+          "state": "listed"
+        },
+        {
+          "index": 9,
+          "state": "listed"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "url": "https://custodiance.com/jordan",
+      "status": 200,
+      "finalUrl": "https://custodiance.com/jordan",
+      "chain": [
+        {
+          "url": "https://custodiance.com/jordan",
+          "status": 200
+        }
+      ],
+      "error": null,
+      "canonical": "https://custodiance.com/jordan",
+      "jsonldBlocks": 1,
+      "personCount": 1,
+      "person": {
+        "via": "ProfilePage.mainEntity",
+        "id": "https://custodiance.com/#founder",
+        "name": "Jordan Gilbert",
+        "names": [
+          "Jordan Gilbert"
+        ],
+        "alternateNames": [],
+        "url": "https://custodiance.com/jordan",
+        "sameAs": [
+          "https://veryseoly.com/jordan",
+          "https://www.jortech.co.uk/jordan",
+          "https://dacros.com/jordan",
+          "https://ticketwavehq.com/jordan",
+          "https://citorah.com/author",
+          "https://github.com/eu-jordangilbert",
+          "https://www.linkedin.com/in/eu-jordangilbert/",
+          "https://www.instagram.com/jorzior/"
+        ],
+        "hasSameAs": true
+      },
+      "coverage": [
+        {
+          "index": 1,
+          "state": "listed"
+        },
+        {
+          "index": 2,
+          "state": "listed"
+        },
+        {
+          "index": 3,
+          "state": "listed"
+        },
+        {
+          "index": 4,
+          "state": "listed"
+        },
+        {
+          "index": 5,
+          "state": "self"
+        },
+        {
+          "index": 6,
+          "state": "listed"
+        },
+        {
+          "index": 7,
+          "state": "listed"
+        },
+        {
+          "index": 8,
+          "state": "listed"
+        },
+        {
+          "index": 9,
+          "state": "listed"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "url": "https://citorah.com/author",
+      "status": 200,
+      "finalUrl": "https://citorah.com/author",
+      "chain": [
+        {
+          "url": "https://citorah.com/author",
+          "status": 200
+        }
+      ],
+      "error": null,
+      "canonical": "https://citorah.com/author",
+      "jsonldBlocks": 1,
+      "personCount": 1,
+      "person": {
+        "via": "ProfilePage.mainEntity",
+        "id": "https://citorah.com/author#person",
+        "name": "Jordan Gilbert",
+        "names": [
+          "Jordan Gilbert"
+        ],
+        "alternateNames": [],
+        "url": "https://citorah.com/author",
+        "sameAs": [
+          "https://veryseoly.com/jordan",
+          "https://www.jortech.co.uk/jordan",
+          "https://dacros.com/jordan",
+          "https://ticketwavehq.com/jordan",
+          "https://custodiance.com/jordan",
+          "https://github.com/eu-jordangilbert",
+          "https://www.linkedin.com/in/eu-jordangilbert/",
+          "https://www.instagram.com/jorzior/"
+        ],
+        "hasSameAs": true
+      },
+      "coverage": [
+        {
+          "index": 1,
+          "state": "listed"
+        },
+        {
+          "index": 2,
+          "state": "listed"
+        },
+        {
+          "index": 3,
+          "state": "listed"
+        },
+        {
+          "index": 4,
+          "state": "listed"
+        },
+        {
+          "index": 5,
+          "state": "listed"
+        },
+        {
+          "index": 6,
+          "state": "self"
+        },
+        {
+          "index": 7,
+          "state": "listed"
+        },
+        {
+          "index": 8,
+          "state": "listed"
+        },
+        {
+          "index": 9,
+          "state": "listed"
+        }
+      ]
+    }
+  ],
+  "names": [
+    {
+      "name": "Jordan Lewis Gilbert",
+      "asName": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "asAlternateName": [],
+      "onPages": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "Jordan Gilbert",
+      "asName": [
+        5,
+        6
+      ],
+      "asAlternateName": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "onPages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "url": "https://ticketwavehq.com/jordan",
+      "member": 1,
+      "listedBy": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "listedAs": [
+        "https://ticketwavehq.com/jordan"
+      ],
+      "result": "ok",
+      "status": 200,
+      "finalUrl": "https://ticketwavehq.com/jordan",
+      "chain": [
+        {
+          "url": "https://ticketwavehq.com/jordan",
+          "status": 200
+        }
+      ],
+      "note": "HTTP 200"
+    },
+    {
+      "url": "https://veryseoly.com/jordan",
+      "member": 2,
+      "listedBy": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "listedAs": [
+        "https://veryseoly.com/jordan"
+      ],
+      "result": "ok",
+      "status": 200,
+      "finalUrl": "https://veryseoly.com/jordan",
+      "chain": [
+        {
+          "url": "https://veryseoly.com/jordan",
+          "status": 200
+        }
+      ],
+      "note": "HTTP 200"
+    },
+    {
+      "url": "https://dacros.com/jordan",
+      "member": 3,
+      "listedBy": [
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "listedAs": [
+        "https://dacros.com/jordan"
+      ],
+      "result": "ok",
+      "status": 200,
+      "finalUrl": "https://dacros.com/jordan",
+      "chain": [
+        {
+          "url": "https://dacros.com/jordan",
+          "status": 200
+        }
+      ],
+      "note": "HTTP 200"
+    },
+    {
+      "url": "https://www.jortech.co.uk/jordan",
+      "member": 4,
+      "listedBy": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "listedAs": [
+        "https://www.jortech.co.uk/jordan"
+      ],
+      "result": "ok",
+      "status": 200,
+      "finalUrl": "https://www.jortech.co.uk/jordan",
+      "chain": [
+        {
+          "url": "https://www.jortech.co.uk/jordan",
+          "status": 200
+        }
+      ],
+      "note": "HTTP 200"
+    },
+    {
+      "url": "https://custodiance.com/jordan",
+      "member": 5,
+      "listedBy": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "listedAs": [
+        "https://custodiance.com/jordan"
+      ],
+      "result": "ok",
+      "status": 200,
+      "finalUrl": "https://custodiance.com/jordan",
+      "chain": [
+        {
+          "url": "https://custodiance.com/jordan",
+          "status": 200
+        }
+      ],
+      "note": "HTTP 200"
+    },
+    {
+      "url": "https://citorah.com/author",
+      "member": 6,
+      "listedBy": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "listedAs": [
+        "https://citorah.com/author"
+      ],
+      "result": "ok",
+      "status": 200,
+      "finalUrl": "https://citorah.com/author",
+      "chain": [
+        {
+          "url": "https://citorah.com/author",
+          "status": 200
+        }
+      ],
+      "note": "HTTP 200"
+    },
+    {
+      "url": "https://github.com/eu-jordangilbert",
+      "member": 7,
+      "listedBy": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "listedAs": [
+        "https://github.com/eu-jordangilbert"
+      ],
+      "result": "ok",
+      "status": 200,
+      "finalUrl": "https://github.com/eu-jordangilbert",
+      "chain": [
+        {
+          "url": "https://github.com/eu-jordangilbert",
+          "status": 200
+        }
+      ],
+      "note": "HTTP 200"
+    },
+    {
+      "url": "https://www.linkedin.com/in/eu-jordangilbert/",
+      "member": 8,
+      "listedBy": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "listedAs": [
+        "https://www.linkedin.com/in/eu-jordangilbert/"
+      ],
+      "result": "unverifiable",
+      "status": 999,
+      "finalUrl": "https://www.linkedin.com/in/eu-jordangilbert/",
+      "chain": [
+        {
+          "url": "https://www.linkedin.com/in/eu-jordangilbert/",
+          "status": 999
+        }
+      ],
+      "note": "returns HTTP 999: the site refuses automated requests"
+    },
+    {
+      "url": "https://www.instagram.com/jorzior/",
+      "member": 9,
+      "listedBy": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "listedAs": [
+        "https://www.instagram.com/jorzior/"
+      ],
+      "result": "unverifiable",
+      "status": 200,
+      "finalUrl": "https://www.instagram.com/jorzior/",
+      "chain": [
+        {
+          "url": "https://www.instagram.com/jorzior/",
+          "status": 200
+        }
+      ],
+      "note": "returns HTTP 200, but www.instagram.com shows logged-out visitors a login page or an app shell, so a 200 does not prove the profile exists"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "warn",
+      "check": "name-mismatch",
+      "page": 5,
+      "message": "name is \"Jordan Gilbert\"; [1], [2], [3], [4] use \"Jordan Lewis Gilbert\""
+    },
+    {
+      "severity": "warn",
+      "check": "name-mismatch",
+      "page": 6,
+      "message": "name is \"Jordan Gilbert\"; [1], [2], [3], [4] use \"Jordan Lewis Gilbert\""
+    },
+    {
+      "severity": "note",
+      "check": "sameas-unverifiable",
+      "target": "https://www.linkedin.com/in/eu-jordangilbert/",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "message": "https://www.linkedin.com/in/eu-jordangilbert/ returns HTTP 999: the site refuses automated requests; listed by [1], [2], [3], [4], [5], [6]"
+    },
+    {
+      "severity": "note",
+      "check": "sameas-unverifiable",
+      "target": "https://www.instagram.com/jorzior/",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "message": "https://www.instagram.com/jorzior/ returns HTTP 200, but www.instagram.com shows logged-out visitors a login page or an app shell, so a 200 does not prove the profile exists; listed by [1], [2], [3], [4], [5], [6]"
+    },
+    {
+      "severity": "note",
+      "check": "alternate-name-gap",
+      "page": 5,
+      "message": "gives neither name nor alternateName as \"Jordan Lewis Gilbert\" (on [1], [2], [3], [4])"
+    },
+    {
+      "severity": "note",
+      "check": "alternate-name-gap",
+      "page": 6,
+      "message": "gives neither name nor alternateName as \"Jordan Lewis Gilbert\" (on [1], [2], [3], [4])"
+    }
+  ],
+  "summary": {
+    "errors": 0,
+    "warnings": 2,
+    "notes": 4,
+    "failOn": "error",
+    "exitCode": 0
+  }
+}

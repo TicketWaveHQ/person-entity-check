@@ -1,0 +1,46 @@
+{
+  "name": "person-entity-check",
+  "version": "0.1.0",
+  "description": "Check that a person's profile pages agree with each other: JSON-LD Person name, sameAs coverage, dead or moved sameAs links, and url against canonical.",
+  "type": "module",
+  "bin": {
+    "person-entity-check": "bin/person-entity-check.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "json-ld",
+    "schema-org",
+    "structured-data",
+    "sameas",
+    "entity",
+    "seo",
+    "knowledge-graph",
+    "link-checker",
+    "cli"
+  ],
+  "author": "Jordan Gilbert",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TicketWaveHQ/person-entity-check.git"
+  },
+  "homepage": "https://github.com/TicketWaveHQ/person-entity-check#readme",
+  "bugs": {
+    "url": "https://github.com/TicketWaveHQ/person-entity-check/issues"
+  }
+}

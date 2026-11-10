@@ -1,0 +1,21 @@
+{
+  "savedBy": "hand-written fixture: example.com and example.org only",
+  "responses": {
+    "https://alpha.example.com/jane": { "status": 200, "file": "../pages/alpha.html" },
+    "https://beta.example.org/jane": { "status": 200, "file": "../pages/beta.html" },
+    "https://gamma.example.com/people/jane": { "status": 200, "file": "../pages/gamma.html" },
+    "https://delta.example.org/jane": { "status": 200, "file": "../pages/delta.html" },
+    "https://code.example.org/jane": { "status": 200, "file": "../pages/plain.html" },
+    "https://code.example.org/jane-old": { "status": 404 },
+    "https://social.example.com/in/jane": { "status": 999 },
+    "https://photos.example.org/jane": { "status": 302, "location": "/accounts/login/?next=%2Fjane" },
+    "https://photos.example.org/accounts/login/?next=%2Fjane": { "status": 200, "file": "../pages/plain.html" },
+    "https://old.example.org/jane": { "status": 301, "location": "https://another.example.com/" },
+    "https://another.example.com/": { "status": 200, "file": "../pages/plain.html" },
+    "https://beta.example.org/jane-2019": { "status": 301, "location": "https://beta.example.org/" },
+    "https://beta.example.org/": { "status": 200, "file": "../pages/plain.html" },
+    "http://alpha.example.com/jane": { "status": 301, "location": "https://alpha.example.com/jane" },
+    "https://elsewhere.example.org/jane": { "status": 200, "file": "../pages/plain.html" },
+    "https://gone.example.org/jane": { "status": 410 }
+  }
+}

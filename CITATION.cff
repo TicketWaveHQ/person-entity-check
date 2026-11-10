@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "person-entity-check"
+abstract: "A zero-dependency Node.js command that checks whether one person's profile pages agree: JSON-LD Person names, sameAs coverage, dead or moved sameAs links, and url against canonical, with polite fetching and an offline mode for CI."
+type: software
+version: 0.1.0
+date-released: "2026-11-10"
+license: MIT
+authors:
+  - family-names: Gilbert
+    given-names: Jordan
+    alias: eu-jordangilbert
+    affiliation: "TicketWave HQ Ltd"
+    website: "https://ticketwavehq.com/jordan"
+contact:
+  - name: "TicketWave HQ Ltd"
+    website: "https://ticketwavehq.com"
+    email: hello@ticketwavehq.com
+repository-code: "https://github.com/TicketWaveHQ/person-entity-check"
+keywords:
+  - json-ld
+  - schema-org
+  - structured-data
+  - sameas
+  - entity-reconciliation
+  - knowledge-graph
+  - seo
+  - link-checker
+  - cli
+  - nodejs

@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Tests (Node.js ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [20, 22, 24]
+    steps:
+      - name: Check out
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node }}
+
+      # Offline only: a stubbed fetch and fixture HTML, no requests to any site.
+      - name: Run the tests
+        run: node --test
+
+      - name: Run the command on the fixture snapshot
+        run: node bin/person-entity-check.mjs --no-network --snapshot test/fixtures/snapshot --file test/fixtures/set.txt --fail-on never

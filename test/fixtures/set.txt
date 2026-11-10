@@ -1,0 +1,9 @@
+# Jane Example's pages and profiles (fixture: example.com and example.org only)
+https://alpha.example.com/jane
+page https://beta.example.org/jane
+https://gamma.example.com/people/jane   # a trailing comment
+https://delta.example.org/jane
+
+profile https://code.example.org/jane
+profile https://social.example.com/in/jane
+profile https://photos.example.org/jane

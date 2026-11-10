@@ -1,0 +1,56 @@
+person-entity-check 0.1.0 | no-network | 9 snapshot lookups | 2026-11-10T21:32:24.197Z
+
+Set
+  [1]  page     https://ticketwavehq.com/jordan
+  [2]  page     https://veryseoly.com/jordan
+  [3]  page     https://dacros.com/jordan
+  [4]  page     https://www.jortech.co.uk/jordan
+  [5]  page     https://custodiance.com/jordan
+  [6]  page     https://citorah.com/author
+  [7]  profile  https://github.com/eu-jordangilbert
+  [8]  profile  https://www.linkedin.com/in/eu-jordangilbert/
+  [9]  profile  https://www.instagram.com/jorzior/
+
+Pages
+  #    HTTP  Person found by         name                  url  sameAs
+  [1]  200   ProfilePage.mainEntity  Jordan Lewis Gilbert  ok   8
+  [2]  200   ProfilePage.mainEntity  Jordan Lewis Gilbert  ok   8
+  [3]  200   ProfilePage.mainEntity  Jordan Lewis Gilbert  ok   8
+  [4]  200   ProfilePage.mainEntity  Jordan Lewis Gilbert  ok   8
+  [5]  200   ProfilePage.mainEntity  Jordan Gilbert        ok   8
+  [6]  200   ProfilePage.mainEntity  Jordan Gilbert        ok   8
+
+Names
+  "Jordan Lewis Gilbert"  name on [1], [2], [3], [4]
+  "Jordan Gilbert"        name on [5], [6]; alternateName on [1], [2], [3], [4]
+
+sameAs coverage (row: the page; column: the set member its sameAs should list)
+       [1]  [2]  [3]  [4]  [5]  [6]  [7]  [8]  [9]
+  [1]  -    yes  yes  yes  yes  yes  yes  yes  yes
+  [2]  yes  -    yes  yes  yes  yes  yes  yes  yes
+  [3]  yes  yes  -    yes  yes  yes  yes  yes  yes
+  [4]  yes  yes  yes  -    yes  yes  yes  yes  yes
+  [5]  yes  yes  yes  yes  -    yes  yes  yes  yes
+  [6]  yes  yes  yes  yes  yes  -    yes  yes  yes
+
+sameAs targets
+  result        HTTP  target                                         set  listed by
+  ok            200   https://ticketwavehq.com/jordan                [1]  [2], [3], [4], [5], [6]
+  ok            200   https://veryseoly.com/jordan                   [2]  [1], [3], [4], [5], [6]
+  ok            200   https://dacros.com/jordan                      [3]  [1], [2], [4], [5], [6]
+  ok            200   https://www.jortech.co.uk/jordan               [4]  [1], [2], [3], [5], [6]
+  ok            200   https://custodiance.com/jordan                 [5]  [1], [2], [3], [4], [6]
+  ok            200   https://citorah.com/author                     [6]  [1], [2], [3], [4], [5]
+  ok            200   https://github.com/eu-jordangilbert            [7]  [1], [2], [3], [4], [5], [6]
+  unverifiable  999   https://www.linkedin.com/in/eu-jordangilbert/  [8]  [1], [2], [3], [4], [5], [6]
+  unverifiable  200   https://www.instagram.com/jorzior/             [9]  [1], [2], [3], [4], [5], [6]
+
+Findings
+  WARN  [5]  name-mismatch        name is "Jordan Gilbert"; [1], [2], [3], [4] use "Jordan Lewis Gilbert"
+  WARN  [6]  name-mismatch        name is "Jordan Gilbert"; [1], [2], [3], [4] use "Jordan Lewis Gilbert"
+  NOTE  -    sameas-unverifiable  https://www.linkedin.com/in/eu-jordangilbert/ returns HTTP 999: the site refuses automated requests; listed by [1], [2], [3], [4], [5], [6]
+  NOTE  -    sameas-unverifiable  https://www.instagram.com/jorzior/ returns HTTP 200, but www.instagram.com shows logged-out visitors a login page or an app shell, so a 200 does not prove the profile exists; listed by [1], [2], [3], [4], [5], [6]
+  NOTE  [5]  alternate-name-gap   gives neither name nor alternateName as "Jordan Lewis Gilbert" (on [1], [2], [3], [4])
+  NOTE  [6]  alternate-name-gap   gives neither name nor alternateName as "Jordan Lewis Gilbert" (on [1], [2], [3], [4])
+
+Result: 0 errors, 2 warnings, 4 notes. Exit 0 (--fail-on error).

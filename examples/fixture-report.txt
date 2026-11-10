@@ -1,0 +1,76 @@
+person-entity-check 0.1.0 | no-network | 16 snapshot lookups | 2026-11-10T21:32:25.289Z
+
+Set
+  [1]  page     https://alpha.example.com/jane
+  [2]  page     https://beta.example.org/jane
+  [3]  page     https://gamma.example.com/people/jane
+  [4]  page     https://delta.example.org/jane
+  [5]  profile  https://code.example.org/jane
+  [6]  profile  https://social.example.com/in/jane
+  [7]  profile  https://photos.example.org/jane
+
+Pages
+  #    HTTP  Person found by         name          url            sameAs
+  [1]  200   ProfilePage.mainEntity  Jane Example  ok             5
+  [2]  200   ProfilePage.mainEntity  Jane Example  fragment       6
+  [3]  200   url matches the page    J. Example    not canonical  9
+  [4]  200   -                       -             -              -
+
+Names
+  "Jane Example"  name on [1], [2]; alternateName on [3]
+  "J. Example"    name on [3]; alternateName on [1]
+
+sameAs coverage (row: the page; column: the set member its sameAs should list)
+       [1]  [2]  [3]  [4]  [5]  [6]  [7]
+  [1]  -    yes  yes  NO   NO   yes  yes
+  [2]  yes  -    NO   NO   yes  yes  yes
+  [3]  yes  yes  -    yes  yes  yes  yes
+
+sameAs targets
+  result        HTTP       target                                                      set  listed by
+  ok            200        https://alpha.example.com/jane                              [1]  [2]
+  ok            301 > 200  http://alpha.example.com/jane                               [1]  [3]
+                           -> https://alpha.example.com/jane
+  ok            200        https://beta.example.org/jane                               [2]  [1], [3]
+  ok            200        https://gamma.example.com/people/jane                       [3]  [1]
+  ok            200        https://delta.example.org/jane                              [4]  [3]
+  ok            200        https://code.example.org/jane                               [5]  [2], [3]
+  unverifiable  999        https://social.example.com/in/jane                          [6]  [1], [2], [3]
+  unverifiable  302 > 200  https://photos.example.org/jane                             [7]  [1], [2], [3]
+                           -> https://photos.example.org/accounts/login/?next=%2Fjane
+  dead          404        https://code.example.org/jane-old                           -    [1]
+  moved host    301 > 200  https://old.example.org/jane                                -    [2]
+                           -> https://another.example.com/
+  moved         301 > 200  https://beta.example.org/jane-2019                          -    [2]
+                           -> https://beta.example.org/
+  ok            200        https://elsewhere.example.org/jane                          -    [3]
+  dead          410        https://gone.example.org/jane                               -    [3]
+
+Findings
+  ERROR  -    sameas-dead          https://code.example.org/jane-old returns HTTP 404; listed by [1]. [5] https://code.example.org/jane is on the same host and missing from [1], so the profile may have been renamed
+  ERROR  -    sameas-moved-host    https://old.example.org/jane redirects to another host's home page: https://another.example.com/, which usually means the page was removed or the address changed hands; remove the link or point it at the current page; listed by [2]
+  ERROR  -    sameas-dead          https://gone.example.org/jane returns HTTP 410; listed by [3]
+  ERROR  [4]  jsonld-invalid       JSON-LD block 1 is not valid JSON (Expected double-quoted property name in JSON at position 79 (line 1 column 80))
+  ERROR  [4]  person-missing       no Person node in 2 JSON-LD block(s)
+  WARN   -    sameas-moved         https://beta.example.org/jane-2019 redirects to the home page: https://beta.example.org/, which usually means the page was removed or the address changed hands; remove the link or point it at the current page; listed by [2]
+  WARN   [1]  sameas-unlisted      sameAs lists https://code.example.org/jane-old, which is not in the set; add it to the set if it is this person, or remove it
+  WARN   [1]  sameas-missing       sameAs does not list [4] https://delta.example.org/jane, [5] https://code.example.org/jane
+  WARN   [2]  url-fragment         the Person url https://beta.example.org/jane#person points at a fragment; url should be the page (https://beta.example.org/jane), and the fragment form belongs in @id
+  WARN   [2]  sameas-fragment      sameAs entry https://alpha.example.com/jane#me points at a fragment; list the page (https://alpha.example.com/jane)
+  WARN   [2]  sameas-unlisted      sameAs lists https://old.example.org/jane, which is not in the set; add it to the set if it is this person, or remove it
+  WARN   [2]  sameas-unlisted      sameAs lists https://beta.example.org/jane-2019, which is not in the set; add it to the set if it is this person, or remove it
+  WARN   [2]  sameas-missing       sameAs does not list [3] https://gamma.example.com/people/jane, [4] https://delta.example.org/jane
+  WARN   [3]  canonical-elsewhere  the canonical is https://gamma.example.com/people/jane/, not the fetched address https://gamma.example.com/people/jane (trailing slash)
+  WARN   [3]  url-not-canonical    the Person url https://gamma.example.com/people/jane differs from the canonical https://gamma.example.com/people/jane/ (trailing slash)
+  WARN   [3]  name-mismatch        name is "J. Example"; [1], [2] use "Jane Example"
+  WARN   [3]  sameas-unlisted      sameAs lists https://elsewhere.example.org/jane, which is not in the set; add it to the set if it is this person, or remove it
+  WARN   [3]  sameas-unlisted      sameAs lists https://gone.example.org/jane, which is not in the set; add it to the set if it is this person, or remove it
+  NOTE   -    sameas-redirect      http://alpha.example.com/jane redirects to https://alpha.example.com/jane (http vs https); listed by [3]
+  NOTE   -    sameas-unverifiable  https://social.example.com/in/jane returns HTTP 999: the site refuses automated requests; listed by [1], [2], [3]
+  NOTE   -    sameas-unverifiable  https://photos.example.org/jane redirects to a login page (https://photos.example.org/accounts/login/?next=%2Fjane); listed by [1], [2], [3]
+  NOTE   [2]  alternate-name-gap   gives neither name nor alternateName as "J. Example" (on [1], [3])
+  NOTE   [3]  sameas-variant       sameAs lists http://alpha.example.com/jane for [1] https://alpha.example.com/jane (http vs https)
+  NOTE   [3]  sameas-self          sameAs lists the page itself (https://gamma.example.com/people/jane); sameAs is for the other pages
+  NOTE   [4]  canonical-missing    no <link rel="canonical">; the Person url was compared with the fetched address
+
+Result: 5 errors, 13 warnings, 7 notes. Exit 1 (--fail-on error).
