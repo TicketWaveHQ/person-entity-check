@@ -80,34 +80,46 @@ export function networkTransport({
   return {
     network: true,
     async request(url, { wantBody = false } = {}) {
-      let res;
+      // A referenced timer, not AbortSignal.timeout(): that timer does not keep the
+      // process alive, so on Node 20 and 22 a stalled request with no socket of its
+      // own let the event loop drain before the timeout fired. It covers the body too.
+      const controller = new AbortController();
+      const timer = setTimeout(
+        () => controller.abort(new DOMException('The operation timed out.', 'TimeoutError')),
+        timeoutMs,
+      );
       try {
-        res = await fetchImpl(url, {
-          method: 'GET',
-          redirect: 'manual',
-          headers: {
-            'user-agent': userAgent,
-            accept: 'text/html,application/xhtml+xml;q=0.9,*/*;q=0.5',
-            'accept-language': 'en-GB,en;q=0.8',
-          },
-          signal: AbortSignal.timeout(timeoutMs),
-        });
-      } catch (err) {
-        return { url, error: errorCode(err) };
-      }
-      const status = res.status;
-      const location = res.headers?.get?.('location') ?? null;
-      const contentType = res.headers?.get?.('content-type') ?? null;
-      if (wantBody && status >= 200 && status < 300) {
+        let res;
         try {
-          const { body, truncated } = await readBody(res, maxBytes, contentType);
-          return { url, status, location, contentType, body, truncated };
+          res = await fetchImpl(url, {
+            method: 'GET',
+            redirect: 'manual',
+            headers: {
+              'user-agent': userAgent,
+              accept: 'text/html,application/xhtml+xml;q=0.9,*/*;q=0.5',
+              'accept-language': 'en-GB,en;q=0.8',
+            },
+            signal: controller.signal,
+          });
         } catch (err) {
-          return { url, status, location, contentType, error: errorCode(err) };
+          return { url, error: errorCode(err) };
         }
+        const status = res.status;
+        const location = res.headers?.get?.('location') ?? null;
+        const contentType = res.headers?.get?.('content-type') ?? null;
+        if (wantBody && status >= 200 && status < 300) {
+          try {
+            const { body, truncated } = await readBody(res, maxBytes, contentType);
+            return { url, status, location, contentType, body, truncated };
+          } catch (err) {
+            return { url, status, location, contentType, error: errorCode(err) };
+          }
+        }
+        await discard(res);
+        return { url, status, location, contentType, body: null, truncated: false };
+      } finally {
+        clearTimeout(timer);
       }
-      await discard(res);
-      return { url, status, location, contentType, body: null, truncated: false };
     },
   };
 }
